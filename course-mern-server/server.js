@@ -14,9 +14,10 @@ cloudinary.v2.config({
 })
 
 export const instance = new RazorPay({
-    key_id:process.env.RAZORPAY_API_KEY,
-    key_secret:process.env.RAZORPAY_API_SECRET,
-});
+    key_id: process.env.RAZORPAY_API_KEY,
+    key_secret: process.env.RAZORPAY_API_SECRET,
+  });
+  
 
 nodeCron.schedule("0 0 0 1 * *", async ()=>{//0 sec 0 min 0 hr 1 din ko update hoga.
     try {
