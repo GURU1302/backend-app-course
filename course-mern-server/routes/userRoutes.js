@@ -43,7 +43,7 @@ router.route("/changepassword").put(isAuthenticated, changePassword);
 router.route("/updateprofile").put(isAuthenticated,singleUpload, updateProfile);
 
 //update the profile picture
-router.route("/updateprofilepicture").put(isAuthenticated, updateProfilePicture);
+router.route("/updateprofilepicture").put(isAuthenticated, singleUpload, updateProfilePicture);
 
 //forget password
 router.route("/forgetpassword").post(forgetPassword);

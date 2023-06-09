@@ -148,7 +148,7 @@ export const updateProfilePicture = (async(req,res,next)=>{
     //cloudinary todo
 const file=req.file;
 
-const user= await User.findById(req.user._id).select("+password");
+const user= await User.findById(req.user._id);
 
 
 const fileUri =getDataUri(file);
