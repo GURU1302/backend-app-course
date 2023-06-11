@@ -307,7 +307,7 @@ export const updateUserRole = catchAsyncError(async(req,res,next)=>{
     if(!user) return next(new ErrorHandler("User not found",404));
 
    if(user.role === 'user') user.role = "admin";
-   if(user.role === 'admin') user.role = "user";
+   else user.role = "user";
 
    await user.save();
 
@@ -336,7 +336,7 @@ export const deleteUser = catchAsyncError(async(req,res,next)=>{
     res.status(200)
     .json({
         success:true,
-       message: "Role Updated",
+       message: "User Deleted Successfully",
     })
     
 })
